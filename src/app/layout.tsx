@@ -3,13 +3,13 @@ import "./globals.css";
 import { GTMHead, GTMBody, GA4Script, GoogleAdsConversion } from "@/components/GoogleTracking";
 
 export const metadata: Metadata = {
-  title: "SOS MobilGumiPest - Országos Mobil Gumiszerviz 0-24",
+  title: "SOS MobilGumiMost - Országos Mobil Gumiszerviz 0-24",
   description:
     "Kerékcsere, gumiszerviz, defektjavítás bármikor, bárhol. Mobil gumiszervizünk az év minden napján igénybe vehető. Hívjon: +36 20 628 2000",
   keywords:
     "mobilgumipest, mobil gumiszerviz, defektjavítás, kerékcsere, gumicsere, Budapest, autópálya mentés, non-stop gumiszerviz",
   openGraph: {
-    title: "SOS MobilGumiPest - Országos Mobil Gumiszerviz 0-24",
+    title: "SOS MobilGumiMost - Országos Mobil Gumiszerviz 0-24",
     description:
       "Kerékcsere, gumiszerviz, defektjavítás bármikor, bárhol. Hívjon: +36 20 628 2000",
     type: "website",

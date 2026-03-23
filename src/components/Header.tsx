@@ -15,8 +15,8 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      {/* Top bar */}
-      <div className="bg-black text-white text-sm">
+      {/* Top bar - hidden on mobile */}
+      <div className="hidden md:block bg-black text-white text-sm">
         <div className="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
           <div className="flex items-center gap-2">
             <Clock className="w-4 h-4 text-accent-500" />
@@ -50,12 +50,13 @@ export default function Header() {
               <span className="text-white font-black text-lg">M</span>
             </div>
             <div className="leading-tight">
-              <span className="font-extrabold text-accent-500 text-lg">
-                SOS
-              </span>
+              
               <span className="font-bold text-gray-200 text-lg">
                 {" "}
-                MobilGumiPest
+                MobilGumi
+              </span>
+              <span className="font-extrabold text-accent-500 text-lg uppercase">
+                MOST
               </span>
             </div>
           </a>

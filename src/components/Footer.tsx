@@ -13,15 +13,18 @@ export default function Footer() {
                 <span className="text-white font-black text-lg">M</span>
               </div>
               <div>
-                <span className="font-extrabold text-lg">SOS</span>
+                
                 <span className="font-bold text-gray-400 text-lg">
                   {" "}
-                  MobilGumiPest
+                  MobilGumi
+                </span>
+                <span className="font-extrabold text-accent-500 text-lg uppercase">
+                  MOST
                 </span>
               </div>
             </div>
             <p className="text-gray-500 text-sm leading-relaxed">
-              Országos mobil gumiszerviz szolgáltatás, SOS kiszállással. Az év
+              Budapesten és Pest megyében mobil gumiszerviz szolgáltatás, SOS kiszállással. Az év
               minden napján, 0-24.
             </p>
           </div>
@@ -91,7 +94,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-gray-600 text-sm">
-            &copy; {new Date().getFullYear()} SOS MobilGumiPest. Minden jog
+            &copy; {new Date().getFullYear()} SOS MobilGumiMost. Minden jog
             fenntartva.
           </p>
           <CookieSettingsButton />

@@ -83,7 +83,7 @@ export default function ThankYouPage() {
               </a>
               <a
                 href="tel:+36301940601"
-                className="inline-flex items-center gap-3 bg-accent-500/20 hover:bg-accent-500 text-accent-400 hover:text-white font-bold px-6 py-3 rounded-full transition-all hover:shadow-lg text-lg"
+                className="inline-flex items-center gap-3 bg-accent-500 hover:bg-accent-600 text-white font-bold px-6 py-3 rounded-full transition-all hover:shadow-lg hover:shadow-accent-500/20 text-lg"
               >
                 <Phone className="w-5 h-5" />
                 +36 30 194 0601
