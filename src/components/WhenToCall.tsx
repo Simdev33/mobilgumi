@@ -3,27 +3,27 @@ import { Phone, CircleDot } from "lucide-react";
 const scenarios = [
   {
     number: "01",
-    title: "Ha autója defektet, vagy durrdefektet kapott",
+    title: "Váratlan defekt vagy gumirobbanás az úton",
     description:
-      "Szakértő munkatársaink hívását követően rövid időn belül a helyszínre érkeznek, és elvégzik a szükséges javításokat, súlyos esetben a kerékcserét.",
+      "Egy hívás, és már indulunk is. Csapatunk gyorsan a helyszínre érkezik, megjavítja vagy kicseréli a sérült kereket, hogy Ön mielőbb folytathassa útját.",
   },
   {
     number: "02",
-    title: "Ha autópályán kerül bajba",
+    title: "Autópályán ragadt, és azonnali segítség kell",
     description:
-      "Autópályán fellépő probléma esetén gyors megoldásra és azonnali cselekvésre van szükség. Mozgó gumiszervizünk perceken belül a helyszínre siet, és elvégzi a szükséges javításokat.",
+      "Az autópályán minden perc számít. Mobil szervizünk a lehető legrövidebb időn belül megérkezik, és helyben megoldja a problémát — biztonságosan, szakszerűen.",
   },
   {
     number: "03",
-    title: "Ha szezonális gumicserére van szüksége",
+    title: "Eljött a szezonális gumicsere ideje",
     description:
-      "A mobil gumiszerviz legnagyobb előnye, hogy a szolgáltatás igénybevételével jelentős időt takaríthat meg, hiszen nem kell elhagynia otthonát, munkahelyét.",
+      "Ne vesztegesse az idejét szervizben várakozással. Kiszállunk az otthonához vagy a munkahelyére, és kényelmesen, gyorsan elvégezzük a kerékcserét.",
   },
   {
     number: "04",
-    title: "Ha flottája van",
+    title: "Céges flottát üzemeltet",
     description:
-      "Gumiszerviz és kerékcsere szolgáltatásaink keretein belül lehetőség van járműflották abroncsainak karbantartására, szezonális kerékcseréjére.",
+      "Vállalati járműparkokhoz teljes körű gumiszerviz megoldást kínálunk: szezonális csere, karbantartás és sürgősségi javítás — rugalmas időpontokban.",
   },
 ];
 
@@ -36,7 +36,7 @@ export default function WhenToCall() {
             MIKOR HÍVJON?
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
-            Mikor lehet segítségére a mobilgumis szolgáltatás?
+            Milyen helyzetekben számíthat ránk?
           </h2>
         </div>
 
@@ -64,7 +64,7 @@ export default function WhenToCall() {
                   {scenario.description}
                 </p>
                 <a
-                  href="tel:+36307408998"
+                  href="tel:+36206282000"
                   className="inline-flex items-center gap-2 text-accent-500 font-semibold hover:text-accent-400 transition-colors"
                 >
                   <Phone className="w-4 h-4" />

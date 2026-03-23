@@ -5,48 +5,44 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    question: "A mobil gumiszerviz csak Pest megyében érhető el?",
+    question: "Hol érhető el a mobil gumiszerviz szolgáltatás?",
     answer:
-      "Nem. Szolgáltatásunk egész Magyarország területén elérhető, ráadásul éjjel-nappal hívhat minket, hétvégén és munkaszüneti napokon is.",
+      "Szolgáltatásunk Budapest egész területén és Pest megyében érhető el, a nap 24 órájában — hétvégén és ünnepnapokon is.",
   },
   {
-    question: "Mennyi idő alatt érkezik a helyszínre a mobil gumiszerviz?",
+    question: "Milyen gyorsan érkeznek a helyszínre?",
     answer:
-      "Budapesten belül, azonnali indulás esetén akár 30 percen belül a helyszínre érkezünk. Telefonos megkeresés során minden esetben tájékoztatjuk Önt érkezésünk várható időpontjáról.",
+      "Budapesten belül jellemzően 30 percen belül a helyszínen vagyunk. A pontos érkezési időről telefonon egyeztetünk, hogy Ön is tervezhessen.",
   },
   {
-    question:
-      "Kell számolni kiszállási díjjal a szolgáltatás igénybevétele során?",
+    question: "Van külön kiszállási díj?",
     answer:
-      "Nem. A szolgáltatás igénybevételekor nem kell külön kiszállási díjjal számolni, és nem kell aggódnia a rejtett költségek miatt sem. A várható végösszegről telefonos egyeztetés során tájékoztatást nyújtunk.",
+      "Nincs. Áraink tartalmazzák a kiszállást, nincsenek rejtett költségek. A várható végösszeget már a telefonhívás során közöljük Önnel.",
   },
   {
-    question:
-      "Milyen típusú járművek esetén nyújt segítséget a mobil gumiszerviz?",
+    question: "Milyen járművekhez kérhető a szolgáltatás?",
     answer:
-      "Szolgáltatásunk személy- és kistehergépjárművek esetén elérhető, 3.5 tonnáig.",
+      "Személy- és kishaszonjárművekhez egyaránt, 3,5 tonnás össztömegig.",
   },
   {
-    question: "Mennyi időt vesz igénybe a helyszíni defektjavítás?",
+    question: "Mennyi ideig tart egy helyszíni defektjavítás?",
     answer:
-      "A szerelési idő természetesen függ a sérülés típusától és mértékétől. Általánosságban elmondható, hogy a helyszínre érkezéstől számítva 15-25 percen belül végzünk a sérült abroncs javításával.",
+      "A sérülés jellegétől függően általában 15–25 perc alatt elvégezzük a javítást, közvetlenül a helyszínen.",
   },
   {
-    question:
-      "Szükség esetén tudok új abroncsokat vásárolni a helyszínen?",
+    question: "Lehet új abroncsot is vásárolni a helyszínen?",
     answer:
-      "Igen! A típusnak megfelelő, új és használt abroncsok vásárlására is van lehetőség!",
+      "Igen, a járműhöz illő új és használt abroncsokat is tudunk biztosítani, helyszíni felszereléssel együtt.",
   },
   {
-    question: "Hogyan fizethetek a szolgáltatásért?",
+    question: "Milyen fizetési módokat fogadnak el?",
     answer:
-      "Mobil gumiszerviz szolgáltatásunkért fizethet készpénzzel, azonnali átutalással, vagy bankkártyával.",
+      "Készpénzzel, bankkártyával és azonnali átutalással is fizethet — amelyik Önnek a legkényelmesebb.",
   },
   {
-    question:
-      "Mit tegyek, ha nincs meg a kerékőr?",
+    question: "Mi történik, ha nincs meg a kerékőr kulcs?",
     answer:
-      "Felszerelt szervizautónkban számos célszerszám áll rendelkezésünkre, melyek segítségével néhány típus esetén akár roncsolásmentesen is eltávolítható a kerékőr.",
+      "Szervizautónk speciális szerszámokkal van felszerelve, így sok esetben roncsolásmentesen is el tudjuk távolítani a kerékőrt.",
   },
 ];
 

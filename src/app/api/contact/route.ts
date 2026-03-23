@@ -16,14 +16,14 @@ export async function POST(request: Request) {
     }
 
     const { error } = await resend.emails.send({
-      from: "MobilGumis Weboldal <onboarding@resend.dev>",
+      from: "MobilGumiPest Weboldal <onboarding@resend.dev>",
       to: [CONTACT_EMAIL],
       replyTo: email,
       subject: `Új üzenet a weboldalról - ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <div style="background: #1a0505; padding: 24px; border-radius: 12px 12px 0 0;">
-            <h1 style="color: #ff2d2d; margin: 0; font-size: 20px;">SOS MobilGumis</h1>
+            <h1 style="color: #ff2d2d; margin: 0; font-size: 20px;">SOS MobilGumiPest</h1>
             <p style="color: #999; margin: 4px 0 0; font-size: 14px;">Új üzenet érkezett a weboldalról</p>
           </div>
           <div style="background: #111; padding: 24px; border: 1px solid #333; border-top: none; border-radius: 0 0 12px 12px;">

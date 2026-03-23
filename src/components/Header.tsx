@@ -22,13 +22,23 @@ export default function Header() {
             <Clock className="w-4 h-4 text-accent-500" />
             <span>Hétfő - Vasárnap | 0-24</span>
           </div>
-          <a
-            href="tel:+36307408998"
-            className="flex items-center gap-2 hover:text-accent-400 transition-colors"
-          >
-            <Phone className="w-4 h-4 text-accent-500" />
-            <span className="font-semibold">06 30 740 8998</span>
-          </a>
+          <div className="flex items-center gap-4">
+            <a
+              href="tel:+36206282000"
+              className="flex items-center gap-2 hover:text-accent-400 transition-colors"
+            >
+              <Phone className="w-4 h-4 text-accent-500" />
+              <span className="font-semibold">+36 20 628 2000</span>
+            </a>
+            <span className="text-gray-600">|</span>
+            <a
+              href="tel:+36301940601"
+              className="flex items-center gap-2 hover:text-accent-400 transition-colors"
+            >
+              <Phone className="w-4 h-4 text-accent-500" />
+              <span className="font-semibold">+36 30 194 0601</span>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -45,7 +55,7 @@ export default function Header() {
               </span>
               <span className="font-bold text-gray-200 text-lg">
                 {" "}
-                MobilGumis
+                MobilGumiPest
               </span>
             </div>
           </a>
@@ -62,7 +72,7 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="tel:+36307408998"
+              href="tel:+36206282000"
               className="bg-accent-500 hover:bg-accent-600 text-white font-bold px-5 py-2.5 rounded-full transition-all hover:shadow-lg flex items-center gap-2 text-sm"
             >
               <Phone className="w-4 h-4" />
@@ -95,11 +105,18 @@ export default function Header() {
                 </a>
               ))}
               <a
-                href="tel:+36307408998"
-                className="block bg-accent-500 hover:bg-accent-600 text-white font-bold px-5 py-3 rounded-full text-center transition-all"
+                href="tel:+36206282000"
+                className="block bg-accent-500 hover:bg-accent-600 text-white font-bold px-5 py-3 rounded-full text-center transition-all mb-2"
               >
                 <Phone className="w-4 h-4 inline mr-2" />
-                06 30 740 8998
+                +36 20 628 2000
+              </a>
+              <a
+                href="tel:+36301940601"
+                className="block bg-accent-500/20 hover:bg-accent-500 text-accent-400 hover:text-white font-bold px-5 py-3 rounded-full text-center transition-all"
+              >
+                <Phone className="w-4 h-4 inline mr-2" />
+                +36 30 194 0601
               </a>
             </div>
           </div>

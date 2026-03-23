@@ -100,17 +100,19 @@ export default function Pricing() {
                 ))}
               </ul>
 
-              <a
-                href="tel:+36307408998"
-                className={`mt-auto pt-8 w-full flex items-center justify-center gap-2 font-bold py-3 px-6 rounded-full transition-all text-sm ${
-                  card.highlight
-                    ? "bg-accent-500 hover:bg-accent-600 text-white hover:shadow-lg"
-                    : "bg-accent-500/20 hover:bg-accent-500 text-accent-400 hover:text-white hover:shadow-lg"
-                }`}
-              >
-                <Phone className="w-4 h-4" />
-                Hívás most
-              </a>
+              <div className="mt-auto pt-8">
+                <a
+                  href="tel:+36206282000"
+                  className={`w-full flex items-center justify-center gap-2 font-bold py-3 px-6 rounded-full transition-all text-sm ${
+                    card.highlight
+                      ? "bg-accent-500 hover:bg-accent-600 text-white hover:shadow-lg"
+                      : "bg-accent-500/20 hover:bg-accent-500 text-accent-400 hover:text-white hover:shadow-lg"
+                  }`}
+                >
+                  <Phone className="w-4 h-4" />
+                  Hívás most
+                </a>
+              </div>
             </div>
           ))}
         </div>

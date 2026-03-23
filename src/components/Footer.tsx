@@ -16,7 +16,7 @@ export default function Footer() {
                 <span className="font-extrabold text-lg">SOS</span>
                 <span className="font-bold text-gray-400 text-lg">
                   {" "}
-                  MobilGumis
+                  MobilGumiPest
                 </span>
               </div>
             </div>
@@ -55,10 +55,19 @@ export default function Footer() {
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-accent-400" />
                 <a
-                  href="tel:+36307408998"
+                  href="tel:+36206282000"
                   className="text-gray-500 hover:text-accent-400 transition-colors text-sm"
                 >
-                  06 30 740 8998
+                  +36 20 628 2000
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone className="w-4 h-4 text-accent-400" />
+                <a
+                  href="tel:+36301940601"
+                  className="text-gray-500 hover:text-accent-400 transition-colors text-sm"
+                >
+                  +36 30 194 0601
                 </a>
               </li>
               <li className="flex items-center gap-3">
@@ -73,7 +82,7 @@ export default function Footer() {
               <li className="flex items-center gap-3">
                 <MapPin className="w-4 h-4 text-accent-400" />
                 <span className="text-gray-500 text-sm">
-                  Országos kiszállás
+                  Budapest és Pest megye
                 </span>
               </li>
             </ul>
@@ -82,7 +91,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-gray-600 text-sm">
-            &copy; {new Date().getFullYear()} SOS MobilGumis. Minden jog
+            &copy; {new Date().getFullYear()} SOS MobilGumiPest. Minden jog
             fenntartva.
           </p>
           <CookieSettingsButton />

@@ -31,14 +31,13 @@ export default function Hero() {
         </h2>
 
         <p className="animate-fade-in-up-delay-3 text-lg md:text-xl text-gray-300/80 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Kerékcsere, gumiszerviz, defektjavítás bármikor, bárhol. Mobil
-          gumiszervizünk az év minden napján igénybe vehető, legyen szó bármilyen
-          gumiabronccsal kapcsolatos problémáról.
+          Defekt az út szélén? Szezonális gumicsere? Budapesten és Pest
+          megyében éjjel-nappal rendelkezésre állunk - hívjon, és már indulunk is!
         </p>
 
         <div className="animate-fade-in-up-delay-3 flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
           <a
-            href="tel:+36307408998"
+            href="tel:+36206282000"
             className="group relative bg-accent-500 hover:bg-accent-600 text-white font-bold px-8 py-4 rounded-full text-lg transition-all hover:shadow-2xl hover:shadow-accent-500/30 flex items-center gap-3"
           >
             <Phone className="w-5 h-5 group-hover:animate-bounce" />
@@ -57,12 +56,21 @@ export default function Hero() {
           <span className="text-sm text-gray-300 font-medium mb-2">
             24/7 sürgősségi hívás
           </span>
-          <a
-            href="tel:+36307408998"
-            className="relative pulse-ring text-3xl md:text-4xl font-black text-accent-400 hover:text-accent-300 transition-colors"
-          >
-            06 30 740 8998
-          </a>
+          <div className="relative pulse-ring flex flex-col sm:flex-row items-center gap-3 sm:gap-6">
+            <a
+              href="tel:+36206282000"
+              className="text-3xl md:text-4xl font-black text-accent-400 hover:text-accent-300 transition-colors"
+            >
+              +36 20 628 2000
+            </a>
+            <span className="hidden sm:block text-gray-500 text-2xl">|</span>
+            <a
+              href="tel:+36301940601"
+              className="text-3xl md:text-4xl font-black text-accent-400 hover:text-accent-300 transition-colors"
+            >
+              +36 30 194 0601
+            </a>
+          </div>
         </div>
 
         {/* Scroll indicator */}

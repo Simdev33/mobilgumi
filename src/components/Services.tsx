@@ -60,7 +60,7 @@ export default function Services() {
                 {service.description}
               </p>
               <a
-                href="tel:+36307408998"
+                href="tel:+36206282000"
                 className="inline-flex items-center gap-2 text-accent-500 font-semibold hover:text-accent-400 transition-colors text-sm"
               >
                 <Phone className="w-4 h-4" />
