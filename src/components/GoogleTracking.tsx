@@ -2,20 +2,13 @@
 
 import Script from "next/script";
 
-// =====================================================
-// GOOGLE TRACKING KÓDOK - CSERÉLD KI A SAJÁT ID-IDRA!
-// =====================================================
-// GTM_ID:      GTM-XXXXXXX      -> Google Tag Manager ID
-// GA4_ID:      G-XXXXXXXXXX     -> Google Analytics 4 Measurement ID
-// GADS_ID:     AW-XXXXXXXXX     -> Google Ads Conversion ID
-// CONVERSION:  AW-XXXXXXXXX/XXXX -> Google Ads Conversion Label
-// =====================================================
-
-const GTM_ID = "GTM-XXXXXXX";
-const GA4_ID = "G-XXXXXXXXXX";
-const GADS_ID = "AW-XXXXXXXXX";
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || "";
+const GA4_ID = process.env.NEXT_PUBLIC_GA4_ID || "";
+const GADS_ID = process.env.NEXT_PUBLIC_GADS_ID || "";
+const GADS_CONVERSION_LABEL = process.env.NEXT_PUBLIC_GADS_CONVERSION_LABEL || "";
 
 export function GTMHead() {
+  if (!GTM_ID) return null;
   return (
     <Script
       id="gtm-script"
@@ -34,6 +27,7 @@ export function GTMHead() {
 }
 
 export function GTMBody() {
+  if (!GTM_ID) return null;
   return (
     <noscript>
       <iframe
@@ -47,6 +41,7 @@ export function GTMBody() {
 }
 
 export function GA4Script() {
+  if (!GA4_ID) return null;
   return (
     <>
       <Script
@@ -62,7 +57,7 @@ export function GA4Script() {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', '${GA4_ID}');
-            gtag('config', '${GADS_ID}');
+            ${GADS_ID ? `gtag('config', '${GADS_ID}');` : ""}
           `,
         }}
       />
@@ -71,14 +66,13 @@ export function GA4Script() {
 }
 
 export function GoogleAdsConversion() {
+  if (!GADS_ID) return null;
   return (
     <Script
       id="gads-conversion"
       strategy="afterInteractive"
       dangerouslySetInnerHTML={{
         __html: `
-          // Google Ads konverziókövetés - hívás eseményhez
-          // Hívd meg ezt a funkciót, amikor konverziós esemény történik (pl. telefonhívás gombra kattintás)
           window.gtag_report_conversion = function(url) {
             var callback = function () {
               if (typeof(url) != 'undefined') {
@@ -86,7 +80,7 @@ export function GoogleAdsConversion() {
               }
             };
             gtag('event', 'conversion', {
-              'send_to': '${GADS_ID}/CONVERSION_LABEL_IDE',
+              'send_to': '${GADS_CONVERSION_LABEL}',
               'event_callback': callback
             });
             return false;
@@ -96,3 +90,5 @@ export function GoogleAdsConversion() {
     />
   );
 }
+
+export { GADS_CONVERSION_LABEL };

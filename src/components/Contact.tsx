@@ -1,10 +1,12 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import { Mail, MapPin, Phone, Send, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { Mail, MapPin, Phone, Send, AlertCircle, Loader2 } from "lucide-react";
 
 export default function Contact() {
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const router = useRouter();
+  const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
   const [formData, setFormData] = useState({
     name: "",
@@ -32,9 +34,7 @@ export default function Contact() {
         return;
       }
 
-      setStatus("success");
-      setFormData({ name: "", email: "", message: "" });
-      setTimeout(() => setStatus("idle"), 5000);
+      router.push("/koszonjuk");
     } catch {
       setErrorMsg("Hálózati hiba. Kérjük próbálja újra.");
       setStatus("error");
@@ -125,16 +125,6 @@ export default function Contact() {
             <h3 className="text-xl font-bold text-white mb-6">
               Írjon nekünk
             </h3>
-
-            {status === "success" && (
-              <div className="mb-6 bg-green-900/30 border border-green-700/50 rounded-xl p-4 flex items-center gap-3">
-                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                <span className="text-green-300 font-medium">
-                  Üzenetét sikeresen elküldtük! Hamarosan felvesszük Önnel a
-                  kapcsolatot.
-                </span>
-              </div>
-            )}
 
             {status === "error" && (
               <div className="mb-6 bg-red-900/30 border border-red-700/50 rounded-xl p-4 flex items-center gap-3">
