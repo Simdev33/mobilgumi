@@ -41,22 +41,23 @@ export function GTMBody() {
 }
 
 export function GA4Script() {
-  if (!GA4_ID) return null;
+  const primaryId = GA4_ID || GADS_ID;
+  if (!primaryId) return null;
   return (
     <>
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${primaryId}`}
         strategy="afterInteractive"
       />
       <Script
-        id="ga4-config"
+        id="gtag-config"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${GA4_ID}');
+            ${GA4_ID ? `gtag('config', '${GA4_ID}');` : ""}
             ${GADS_ID ? `gtag('config', '${GADS_ID}');` : ""}
           `,
         }}
