@@ -65,10 +65,10 @@ export default function Contact() {
                   Email-cím
                 </h3>
                 <a
-                  href="mailto:mobilgumis.sos@gmail.com"
+                  href="mailto:info@mobilgumimost.hu"
                   className="text-gray-400 hover:text-accent-500 transition-colors"
                 >
-                  mobilgumis.sos@gmail.com
+                  info@mobilgumimost.hu
                 </a>
               </div>
             </div>
