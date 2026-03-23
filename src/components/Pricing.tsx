@@ -1,4 +1,4 @@
-import { Shield, RefreshCw, Settings, Phone } from "lucide-react";
+import { Shield, RefreshCw, Phone } from "lucide-react";
 
 const pricingCards = [
   {
@@ -6,11 +6,11 @@ const pricingCards = [
     title: "Defekt javítás díjak",
     highlight: true,
     items: [
-      { label: "Budapesten belül", price: "20.000 Ft+ÁFA-tól" },
-      { label: "Budapesten belül éjszaka", price: "25.000 Ft+ÁFA-tól" },
-      { label: "Parkolóház / Mélygarázs", price: "+2.000 Ft+ÁFA" },
-      { label: "Autópályán", price: "20.000 Ft+ÁFA-tól" },
-      { label: "Budapest határán kívül", price: "300 Ft+ÁFA/Km" },
+      { label: "Budapesten belül", price: "18.900 Ft" },
+      { label: "Budapesten belül éjszaka", price: "23.900 Ft" },
+      { label: "Parkolóház / Mélygarázs", price: "+2.000 Ft" },
+      { label: "Autópályán", price: "18.900 Ft" },
+      { label: "Budapest határán kívül", price: "300 Ft/Km" },
     ],
   },
   {
@@ -18,22 +18,12 @@ const pricingCards = [
     title: "Szezonális szerelési díjak",
     highlight: false,
     items: [
-      { label: '13"-tól 19"-ig', price: "25.000 Ft+ÁFA-tól" },
-      { label: '19"-tól 21"-ig', price: "30.000 Ft+ÁFA-tól" },
-      { label: '21" felett', price: "35.000 Ft+ÁFA-tól" },
+      { label: '13"-tól 19"-ig', price: "23.900 Ft" },
+      { label: '19"-tól 21"-ig', price: "29.900 Ft" },
+      { label: '21" felett', price: "33.900 Ft" },
     ],
   },
-  {
-    icon: Settings,
-    title: "Egyéb szolgáltatások",
-    highlight: false,
-    items: [
-      { label: "Perem tömítés", price: "600 Ft+ÁFA/db" },
-      { label: "Perem csiszolás", price: "700 Ft+ÁFA/db" },
-      { label: "Acél felni javítása", price: "2.000 Ft+ÁFA/db" },
-      { label: "Selejtgumi elszállítása", price: "500 Ft+ÁFA/db" },
-    ],
-  },
+  
 ];
 
 export default function Pricing() {
@@ -52,7 +42,7 @@ export default function Pricing() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {pricingCards.map((card) => (
             <div
               key={card.title}
