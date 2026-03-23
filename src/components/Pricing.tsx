@@ -56,7 +56,7 @@ export default function Pricing() {
           {pricingCards.map((card) => (
             <div
               key={card.title}
-              className={`card-hover rounded-2xl p-8 ${
+              className={`card-hover rounded-2xl p-8 flex flex-col ${
                 card.highlight
                   ? "bg-accent-500/10 text-white border-2 border-accent-500/40 shadow-xl shadow-accent-500/10"
                   : "bg-gray-800/60 text-white border border-gray-700/50"
@@ -102,7 +102,7 @@ export default function Pricing() {
 
               <a
                 href="tel:+36307408998"
-                className={`mt-8 w-full flex items-center justify-center gap-2 font-bold py-3 px-6 rounded-full transition-all text-sm ${
+                className={`mt-auto pt-8 w-full flex items-center justify-center gap-2 font-bold py-3 px-6 rounded-full transition-all text-sm ${
                   card.highlight
                     ? "bg-accent-500 hover:bg-accent-600 text-white hover:shadow-lg"
                     : "bg-accent-500/20 hover:bg-accent-500 text-accent-400 hover:text-white hover:shadow-lg"
