@@ -16,7 +16,7 @@ export async function POST(request: Request) {
     }
 
     const { error } = await resend.emails.send({
-      from: "MobilGumiMost Weboldal <onboarding@resend.dev>",
+      from: "MobilGumiMost Weboldal <info@mobilgumimost.hu>",
       to: [CONTACT_EMAIL],
       replyTo: email,
       subject: `Új üzenet a weboldalról - ${name}`,
