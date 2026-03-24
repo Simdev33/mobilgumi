@@ -40,9 +40,28 @@ export function GTMBody() {
   );
 }
 
-export function GA4Script() {
+export function GtagScripts() {
   const primaryId = GA4_ID || GADS_ID;
   if (!primaryId) return null;
+
+  const configLines: string[] = [];
+  if (GA4_ID) configLines.push(`gtag('config', '${GA4_ID}');`);
+  if (GADS_ID) configLines.push(`gtag('config', '${GADS_ID}');`);
+
+  const conversionFn = GADS_CONVERSION_LABEL
+    ? `
+      window.gtag_report_conversion = function(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') { window.location = url; }
+        };
+        gtag('event', 'conversion', {
+          'send_to': '${GADS_CONVERSION_LABEL}',
+          'event_callback': callback
+        });
+        return false;
+      };`
+    : "";
+
   return (
     <>
       <Script
@@ -50,45 +69,20 @@ export function GA4Script() {
         strategy="afterInteractive"
       />
       <Script
-        id="gtag-config"
+        id="gtag-init"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            ${GA4_ID ? `gtag('config', '${GA4_ID}');` : ""}
-            ${GADS_ID ? `gtag('config', '${GADS_ID}');` : ""}
+            ${configLines.join("\n            ")}
+            console.log('[Tracking] gtag initialized: ${[GA4_ID, GADS_ID].filter(Boolean).join(", ")}');
+            ${conversionFn}
           `,
         }}
       />
     </>
-  );
-}
-
-export function GoogleAdsConversion() {
-  if (!GADS_ID) return null;
-  return (
-    <Script
-      id="gads-conversion"
-      strategy="afterInteractive"
-      dangerouslySetInnerHTML={{
-        __html: `
-          window.gtag_report_conversion = function(url) {
-            var callback = function () {
-              if (typeof(url) != 'undefined') {
-                window.location = url;
-              }
-            };
-            gtag('event', 'conversion', {
-              'send_to': '${GADS_CONVERSION_LABEL}',
-              'event_callback': callback
-            });
-            return false;
-          }
-        `,
-      }}
-    />
   );
 }
 

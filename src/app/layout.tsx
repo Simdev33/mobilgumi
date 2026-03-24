@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { GTMHead, GTMBody, GA4Script, GoogleAdsConversion } from "@/components/GoogleTracking";
+import { GTMHead, GTMBody, GtagScripts } from "@/components/GoogleTracking";
 
 export const metadata: Metadata = {
   title: "SOS MobilGumiMost - Országos Mobil Gumiszerviz 0-24",
@@ -35,8 +35,7 @@ export default function RootLayout({
     <html lang="hu">
       <head>
         <GTMHead />
-        <GA4Script />
-        <GoogleAdsConversion />
+        <GtagScripts />
       </head>
       <body className="antialiased bg-gray-950 text-gray-100">
         <GTMBody />
