@@ -1,4 +1,5 @@
 import { Phone, ArrowDown } from "lucide-react";
+import PhoneLink from "./PhoneLink";
 
 export default function Hero() {
   return (
@@ -36,13 +37,13 @@ export default function Hero() {
         </p>
 
         <div className="animate-fade-in-up-delay-3 flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-          <a
+          <PhoneLink
             href="tel:+36206282000"
             className="group relative bg-accent-500 hover:bg-accent-600 text-white font-bold px-8 py-4 rounded-full text-lg transition-all hover:shadow-2xl hover:shadow-accent-500/30 flex items-center gap-3"
           >
             <Phone className="w-5 h-5 group-hover:animate-bounce" />
             Hívás most
-          </a>
+          </PhoneLink>
           <a
             href="#szolgaltatasok"
             className="bg-white/10 hover:bg-white/20 backdrop-blur text-white font-semibold px-8 py-4 rounded-full text-lg transition-all border border-white/20 hover:border-white/40"
@@ -57,19 +58,19 @@ export default function Hero() {
             24/7 sürgősségi hívás
           </span>
           <div className="relative pulse-ring flex flex-col sm:flex-row items-center gap-3 sm:gap-6">
-            <a
+            <PhoneLink
               href="tel:+36206282000"
               className="text-3xl md:text-4xl font-black text-accent-400 hover:text-accent-300 transition-colors"
             >
               +36 20 628 2000
-            </a>
+            </PhoneLink>
             <span className="hidden sm:block text-gray-500 text-2xl">|</span>
-            <a
+            <PhoneLink
               href="tel:+36301940601"
               className="text-3xl md:text-4xl font-black text-accent-400 hover:text-accent-300 transition-colors"
             >
               +36 30 194 0601
-            </a>
+            </PhoneLink>
           </div>
         </div>
 

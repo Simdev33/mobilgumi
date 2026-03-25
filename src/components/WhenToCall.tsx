@@ -1,4 +1,5 @@
 import { Phone, CircleDot } from "lucide-react";
+import PhoneLink from "./PhoneLink";
 
 const scenarios = [
   {
@@ -63,13 +64,13 @@ export default function WhenToCall() {
                 <p className="text-gray-400 leading-relaxed mb-4">
                   {scenario.description}
                 </p>
-                <a
+                <PhoneLink
                   href="tel:+36206282000"
                   className="inline-flex items-center gap-2 text-accent-500 font-semibold hover:text-accent-400 transition-colors"
                 >
                   <Phone className="w-4 h-4" />
                   Hívás most
-                </a>
+                </PhoneLink>
               </div>
             </div>
           ))}

@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin } from "lucide-react";
 import { CookieSettingsButton } from "./CookieConsent";
+import PhoneLink from "./PhoneLink";
 
 export default function Footer() {
   return (
@@ -57,21 +58,21 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-accent-400" />
-                <a
+                <PhoneLink
                   href="tel:+36206282000"
                   className="text-gray-500 hover:text-accent-400 transition-colors text-sm"
                 >
                   +36 20 628 2000
-                </a>
+                </PhoneLink>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-accent-400" />
-                <a
+                <PhoneLink
                   href="tel:+36301940601"
                   className="text-gray-500 hover:text-accent-400 transition-colors text-sm"
                 >
                   +36 30 194 0601
-                </a>
+                </PhoneLink>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-accent-400" />

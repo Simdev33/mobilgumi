@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Phone, Menu, X, Clock } from "lucide-react";
+import PhoneLink from "./PhoneLink";
 
 const navLinks = [
   { href: "#szolgaltatasok", label: "Szolgáltatások" },
@@ -23,21 +24,21 @@ export default function Header() {
             <span>Hétfő - Vasárnap | 0-24</span>
           </div>
           <div className="flex items-center gap-4">
-            <a
+            <PhoneLink
               href="tel:+36206282000"
               className="flex items-center gap-2 hover:text-accent-400 transition-colors"
             >
               <Phone className="w-4 h-4 text-accent-500" />
               <span className="font-semibold">+36 20 628 2000</span>
-            </a>
+            </PhoneLink>
             <span className="text-gray-600">|</span>
-            <a
+            <PhoneLink
               href="tel:+36301940601"
               className="flex items-center gap-2 hover:text-accent-400 transition-colors"
             >
               <Phone className="w-4 h-4 text-accent-500" />
               <span className="font-semibold">+36 30 194 0601</span>
-            </a>
+            </PhoneLink>
           </div>
         </div>
       </div>
@@ -72,13 +73,13 @@ export default function Header() {
                 {link.label}
               </a>
             ))}
-            <a
+            <PhoneLink
               href="tel:+36206282000"
               className="bg-accent-500 hover:bg-accent-600 text-white font-bold px-5 py-2.5 rounded-full transition-all hover:shadow-lg flex items-center gap-2 text-sm"
             >
               <Phone className="w-4 h-4" />
               Hívás most
-            </a>
+            </PhoneLink>
           </div>
 
           {/* Mobile toggle */}
@@ -105,20 +106,20 @@ export default function Header() {
                   {link.label}
                 </a>
               ))}
-              <a
+              <PhoneLink
                 href="tel:+36206282000"
                 className="block bg-accent-500 hover:bg-accent-600 text-white font-bold px-5 py-3 rounded-full text-center transition-all mb-2"
               >
                 <Phone className="w-4 h-4 inline mr-2" />
                 +36 20 628 2000
-              </a>
-              <a
+              </PhoneLink>
+              <PhoneLink
                 href="tel:+36301940601"
                 className="block bg-accent-500/20 hover:bg-accent-500 text-accent-400 hover:text-white font-bold px-5 py-3 rounded-full text-center transition-all"
               >
                 <Phone className="w-4 h-4 inline mr-2" />
                 +36 30 194 0601
-              </a>
+              </PhoneLink>
             </div>
           </div>
         )}

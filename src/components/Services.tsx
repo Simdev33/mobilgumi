@@ -1,4 +1,5 @@
 import { Wrench, RefreshCw, Truck, AlertTriangle, Phone } from "lucide-react";
+import PhoneLink from "./PhoneLink";
 
 const services = [
   {
@@ -59,13 +60,13 @@ export default function Services() {
               <p className="text-gray-400 leading-relaxed mb-6 text-sm">
                 {service.description}
               </p>
-              <a
+              <PhoneLink
                 href="tel:+36206282000"
                 className="inline-flex items-center gap-2 text-accent-500 font-semibold hover:text-accent-400 transition-colors text-sm"
               >
                 <Phone className="w-4 h-4" />
                 Hívás most
-              </a>
+              </PhoneLink>
             </div>
           ))}
         </div>

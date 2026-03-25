@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { CheckCircle, Phone, ArrowLeft } from "lucide-react";
+import PhoneLink from "@/components/PhoneLink";
 import Script from "next/script";
 
 const GADS_CONVERSION_LABEL = process.env.NEXT_PUBLIC_GADS_CONVERSION_LABEL || "";
@@ -74,20 +75,20 @@ export default function ThankYouPage() {
               Sürgős segítségre van szüksége?
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <a
+              <PhoneLink
                 href="tel:+36206282000"
                 className="inline-flex items-center gap-3 bg-accent-500 hover:bg-accent-600 text-white font-bold px-6 py-3 rounded-full transition-all hover:shadow-lg hover:shadow-accent-500/20 text-lg"
               >
                 <Phone className="w-5 h-5" />
                 +36 20 628 2000
-              </a>
-              <a
+              </PhoneLink>
+              <PhoneLink
                 href="tel:+36301940601"
                 className="inline-flex items-center gap-3 bg-accent-500 hover:bg-accent-600 text-white font-bold px-6 py-3 rounded-full transition-all hover:shadow-lg hover:shadow-accent-500/20 text-lg"
               >
                 <Phone className="w-5 h-5" />
                 +36 30 194 0601
-              </a>
+              </PhoneLink>
             </div>
           </div>
 

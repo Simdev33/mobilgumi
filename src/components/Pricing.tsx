@@ -1,4 +1,5 @@
 import { Shield, RefreshCw, Phone } from "lucide-react";
+import PhoneLink from "./PhoneLink";
 
 const pricingCards = [
   {
@@ -91,7 +92,7 @@ export default function Pricing() {
               </ul>
 
               <div className="mt-auto pt-8">
-                <a
+                <PhoneLink
                   href="tel:+36206282000"
                   className={`w-full flex items-center justify-center gap-2 font-bold py-3 px-6 rounded-full transition-all text-sm ${
                     card.highlight
@@ -101,7 +102,7 @@ export default function Pricing() {
                 >
                   <Phone className="w-4 h-4" />
                   Hívás most
-                </a>
+                </PhoneLink>
               </div>
             </div>
           ))}

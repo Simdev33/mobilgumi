@@ -5,7 +5,7 @@ import Script from "next/script";
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || "";
 const GA4_ID = process.env.NEXT_PUBLIC_GA4_ID || "";
 const GADS_ID = process.env.NEXT_PUBLIC_GADS_ID || "";
-const GADS_CONVERSION_LABEL = process.env.NEXT_PUBLIC_GADS_CONVERSION_LABEL || "";
+const GADS_CONVERSION_LABEL = process.env.NEXT_PUBLIC_GADS_CONVERSION_LABEL || "AW-18035717117/2o8_CKXMp48cEP3njJhD";
 
 export function GTMHead() {
   if (!GTM_ID) return null;
@@ -56,6 +56,8 @@ export function GtagScripts() {
         };
         gtag('event', 'conversion', {
           'send_to': '${GADS_CONVERSION_LABEL}',
+          'value': 1.0,
+          'currency': 'HUF',
           'event_callback': callback
         });
         return false;
