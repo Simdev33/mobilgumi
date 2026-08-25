@@ -9,7 +9,6 @@ const stats = [
   {
     icon: Phone,
     title: "+36 20 628 2000",
-    subtitle: "+36 30 194 0601",
     description: "Bármilyen vészhelyzet esetén azonnal a helyszínre sietünk",
   },
   {
@@ -30,9 +29,6 @@ export default function Stats() {
                 <stat.icon className="w-8 h-8 text-accent-400" />
               </div>
               <h3 className="text-xl font-bold mb-2">{stat.title}</h3>
-              {"subtitle" in stat && stat.subtitle && (
-                <h4 className="text-xl font-bold mb-2">{stat.subtitle}</h4>
-              )}
               <p className="text-red-200/70 text-sm mt-auto">{stat.description}</p>
             </div>
           ))}

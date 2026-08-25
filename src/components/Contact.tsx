@@ -92,19 +92,13 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="font-bold text-white text-lg mb-1">
-                  Telefonszámok
+                  Telefonszám
                 </h3>
                 <PhoneLink
                   href="tel:+36206282000"
                   className="block text-2xl font-bold text-accent-500 hover:text-accent-400 transition-colors"
                 >
                   +36 20 628 2000
-                </PhoneLink>
-                <PhoneLink
-                  href="tel:+36301940601"
-                  className="block text-2xl font-bold text-accent-500 hover:text-accent-400 transition-colors mt-1"
-                >
-                  +36 30 194 0601
                 </PhoneLink>
               </div>
             </div>
@@ -117,22 +111,13 @@ export default function Contact() {
               <p className="text-gray-400 mb-6">
                 Hívjon minket bármikor, az év minden napján, 0-24!
               </p>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <PhoneLink
-                  href="tel:+36206282000"
-                  className="inline-flex items-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-bold px-6 py-3 rounded-full transition-all hover:shadow-lg"
-                >
-                  <Phone className="w-5 h-5" />
-                  +36 20 628 2000
-                </PhoneLink>
-                <PhoneLink
-                  href="tel:+36301940601"
-                  className="inline-flex items-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-bold px-6 py-3 rounded-full transition-all hover:shadow-lg"
-                >
-                  <Phone className="w-5 h-5" />
-                  +36 30 194 0601
-                </PhoneLink>
-              </div>
+              <PhoneLink
+                href="tel:+36206282000"
+                className="inline-flex items-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-bold px-6 py-3 rounded-full transition-all hover:shadow-lg"
+              >
+                <Phone className="w-5 h-5" />
+                +36 20 628 2000
+              </PhoneLink>
             </div>
           </div>
 

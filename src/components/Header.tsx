@@ -31,14 +31,6 @@ export default function Header() {
               <Phone className="w-4 h-4 text-accent-500" />
               <span className="font-semibold">+36 20 628 2000</span>
             </PhoneLink>
-            <span className="text-gray-600">|</span>
-            <PhoneLink
-              href="tel:+36301940601"
-              className="flex items-center gap-2 hover:text-accent-400 transition-colors"
-            >
-              <Phone className="w-4 h-4 text-accent-500" />
-              <span className="font-semibold">+36 30 194 0601</span>
-            </PhoneLink>
           </div>
         </div>
       </div>
@@ -108,17 +100,10 @@ export default function Header() {
               ))}
               <PhoneLink
                 href="tel:+36206282000"
-                className="block bg-accent-500 hover:bg-accent-600 text-white font-bold px-5 py-3 rounded-full text-center transition-all mb-2"
+                className="block bg-accent-500 hover:bg-accent-600 text-white font-bold px-5 py-3 rounded-full text-center transition-all"
               >
                 <Phone className="w-4 h-4 inline mr-2" />
                 +36 20 628 2000
-              </PhoneLink>
-              <PhoneLink
-                href="tel:+36301940601"
-                className="block bg-accent-500/20 hover:bg-accent-500 text-accent-400 hover:text-white font-bold px-5 py-3 rounded-full text-center transition-all"
-              >
-                <Phone className="w-4 h-4 inline mr-2" />
-                +36 30 194 0601
               </PhoneLink>
             </div>
           </div>

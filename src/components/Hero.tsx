@@ -57,19 +57,12 @@ export default function Hero() {
           <span className="text-sm text-gray-300 font-medium mb-2">
             24/7 sürgősségi hívás
           </span>
-          <div className="relative pulse-ring flex flex-col sm:flex-row items-center gap-3 sm:gap-6">
+          <div className="relative pulse-ring">
             <PhoneLink
               href="tel:+36206282000"
               className="text-3xl md:text-4xl font-black text-accent-400 hover:text-accent-300 transition-colors"
             >
               +36 20 628 2000
-            </PhoneLink>
-            <span className="hidden sm:block text-gray-500 text-2xl">|</span>
-            <PhoneLink
-              href="tel:+36301940601"
-              className="text-3xl md:text-4xl font-black text-accent-400 hover:text-accent-300 transition-colors"
-            >
-              +36 30 194 0601
             </PhoneLink>
           </div>
         </div>
